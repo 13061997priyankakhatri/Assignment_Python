@@ -1,0 +1,10 @@
+number1 = int(input("\nEnter number1 : "))
+number2 = int(input("\nEnter number2 : "))
+
+print("\nSummation of number1 + number2 = ",number1 + number2) 
+print("\nSubtraction of number1 - number2 = ",number1 - number2)
+print("\nMultiplication of number1 * number2 = ",number1 * number2) 
+print("\nDivsion of number1 / number2 = ",number1 / number2)
+print("\nModolo of number1 % number2 = ",number1 % number2)
+print("\nExponantial of number1 ** number2 = ",number1 ** number2) 
+print("\nFloor Division of number1 // number2 = ",number1 // number2)
