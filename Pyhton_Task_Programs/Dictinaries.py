@@ -1,15 +1,14 @@
+print()
 Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
 print(Dict_1)
 
-
-print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-
 print()
-'''
-Dict2 = {}
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
 
+Dict2 = {}
 alnum = input("Enter email : ")
-for p in range(7):
+for p in range(15):
     Dict2[alnum[p]]= p
 print("Email is:", Dict2)
 
@@ -19,12 +18,10 @@ alpha = input("Enter password :")
 for u in range(0,8):
     Dict3[alpha[u]]= u 
 print("Password is:", Dict3)
-'''
-
 
 print()
-
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
 
 Tops = {}
 
@@ -44,5 +41,3 @@ id = input("Enter faculty id : ")
 Tops['Feculty'] = {'name':name,'id':id}
 
 print(Tops)
-
- 
