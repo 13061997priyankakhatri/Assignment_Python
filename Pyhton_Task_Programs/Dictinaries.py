@@ -41,3 +41,30 @@ id = input("Enter faculty id : ")
 Tops['Feculty'] = {'name':name,'id':id}
 
 print(Tops)
+
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+
+Quiz_game = {}
+
+for p in range(1,11) :
+    
+    que = input("Enter your question : ")
+    ans = input("Enter your answer : ")
+
+    Quiz_game.update({"que"+str(p) :{"que": que , "ans": ans}})
+
+print("Quiz_game = ",Quiz_game)
+
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+
+# task : if keys are same then make addition of values
+
+Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
+Dict_2 ={"name" : "Priyanka","age" : 20, "canvote" : True}
+
+Dict_1.update(Dict_2)
+print(Dict_1)
