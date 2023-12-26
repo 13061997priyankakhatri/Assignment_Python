@@ -3,9 +3,9 @@ Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
 print(Dict_1)
 
 print()
-print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
-
+'''
 Dict2 = {}
 alnum = input("Enter email : ")
 for p in range(15):
@@ -18,9 +18,8 @@ alpha = input("Enter password :")
 for u in range(0,8):
     Dict3[alpha[u]]= u 
 print("Password is:", Dict3)
-
 print()
-print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
 
 Tops = {}
@@ -41,3 +40,69 @@ id = input("Enter faculty id : ")
 Tops['Feculty'] = {'name':name,'id':id}
 
 print(Tops)
+
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+'''
+
+# task : if keys are same then make addition of values
+'''
+Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
+Dict_2 ={"name" : "Priyanka","age" : 20, "canvote" : True}
+
+Dict_1.update(Dict_2)
+print(Dict_1)
+
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+
+# task : make sorting of dictionary based on values
+
+Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
+sortedDict_1 = sorted(Dict_1)
+
+print(sortedDict_1)
+
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+'''
+Quiz_game = {}
+
+for p in range(1,11) :
+    
+    que = input("Enter your question : ")
+    ans = input("Enter your answer : ")
+    Quiz_game.update({str(p) :{"que": que , "ans": ans}})
+    
+print("Quiz_game = ",Quiz_game)
+
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")        
+
+points = 0
+
+i = 1
+
+while i <= 10 :
+    
+    print("que " + str(i) + " : " + Quiz_game[str(i)]["que"])
+    user_ans = input("Enter your answer : ")
+    
+    if (Quiz_game[str(i)]["ans"]) == user_ans :
+        
+        print("Your answer is right.You got 10 points.")
+        points += 10
+        print("Final score is : ", points)
+        
+    else:
+        
+        print("Your answer is wrong.You got -5 points.")
+        points -= 5
+        print("Final score is : ", points)
+        
+    i += 1
+
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
