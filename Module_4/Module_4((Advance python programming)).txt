@@ -1,0 +1,190 @@
+1> What is File function in python? What is keywords to create and write file. 
+
+Ans. File function simply means to open a file and to process it according to the required tasks.
+-> Python facilitates several functions to create, read, write, append, delete and close files.
+-> Keywords to create file is ' x ' and to write file is ' w '.   
+
+13> Explain Exception handling? What is an Error in Python? 
+
+Ans. Exception hendling :
+ 
+-> Exception handling is the process of responding to unwanted or unexpected events when a computer program runs. 
+-> Exception handling deals with these events to avoid the program or system crashing and without this process, exceptions 
+    would disrupt the normal operation of a program.
+
+An Error in Python : 
+
+-> Python has many built-in exceptions that are raised when your program encounters an error (something in the program goes  
+    wrong).
+-> When these exceptions occur, the Python interpreter stops the current process and passes it to the calling process until it is  
+    handled. 
+-> If not handled, the program will crash.
+
+14> How many except statements can a try-except block have? Name Some built-in exception classes.
+
+Ans. A try-except block can have "more than zero" except statements.
+
+--> AttributeError : Raised on the attribute assignment fails.
+--> EOFError : Raised when the input() function hits the end-of-file condition.
+--> ImportError : Raised when the imported module is not found.
+--> IndexError	: Raised when the index of a sequence is out of range.
+--> KeyError : Raised when a key is not found in a dictionary.
+--> TypeError : Raised when a function or operation is applied to an object of an incorrect type.
+--> ValueError : Raised when a function gets an argument of correct type but improper value.
+--> ZeroDivisionError : Raised when the second operand of a division or module operation is zero.
+
+15> When will the else part of try-except-else be executed? 
+
+Ans. The else part of a try-except-else block is executed when no exception occurs within the try block.
+
+16> Can one block of except statements handle multiple exception? 
+
+Ans. Yes, one block of except statements can handle multiple exceptions by specifying them within a single except block or using multiple except blocks.
+
+17> When is the finally block executed? 
+
+Ans. The finally block in a try-except-finally structure is always executed, regardless of whether an exception occurred or not. It is typically used to perform cleanup actions, such as closing files or releasing resources.
+
+18> What happens when "1"== 1 is executed?
+
+Ans. When the expression '1' == 1 is executed, it will return False because the string '1' is not equal to the integer 1. This comparison checks for both value and type equality.
+
+19> How Do You Handle Exceptions With Try/Except/Finally In Python? Explain with coding snippets.
+
+Ans. To handle exceptions in Python using try, except, and finally blocks, you can use the following code snippets:
+
+# Handling exceptions with try/except/finally
+
+# Example 1: Handling specific exceptions
+	try:
+    		result = 10 / 0  # Causes a ZeroDivisionError
+	except ZeroDivisionError:
+    		print("Cannot divide by zero!")
+	finally:
+    		print("This will always execute, irrespective of exceptions.")
+
+# Example 2: Handling multiple exceptions in one block
+	try:
+    		value = int(input("Enter a number: "))
+    		result = 10 / value
+	except (ValueError, ZeroDivisionError):
+    		print("Invalid input or division by zero!")
+	finally:
+    		print("Finally block executed.")
+
+# Example 3: Using separate except blocks for different exceptions
+	try:
+    		file = open("nonexistent_file.txt", "r")
+    		content = file.read()
+    		file.close()
+	except FileNotFoundError:
+    		print("File not found!")
+	finally:
+    		print("Finally block executed.")
+
+==> These examples demonstrate handling specific exceptions, multiple exceptions in one block, and using separate except blocks for different exceptions, followed by the execution of the finally block in each case.
+
+20> What are oops concepts? Is multiple inheritance supported in java .
+
+Ans. Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects" that can contain data in the form of attributes (variables) and behaviors in the form of methods (functions). The key concepts of OOP include:
+
+==> Encapsulation: Encapsulation refers to the bundling of data and methods that operate on the data within a single unit or class. It restricts access to some components of the object, protecting its integrity and preventing unauthorized access.
+
+==> Abstraction: Abstraction involves representing essential features without including the background details. It allows focusing on what an object does rather than how it does it.
+
+==> Inheritance: Inheritance is a mechanism where one class (subclass or child class) can inherit properties and behaviors (attributes and methods) from another class (superclass or parent class). It supports the reusability of code and the creation of a hierarchical structure.
+
+==> Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables a single interface to be used for entities of different types.
+
+In Java, multiple inheritance is not supported in the way it is in some other programming languages like C++. Java does not support inheriting from multiple classes simultaneously to avoid ambiguity and complex hierarchy issues. However, Java supports multiple inheritance through interfaces, where a class can implement multiple interfaces.
+
+21> How to Define a Class in Python? What Is Self? Give An Example Of A Python Class.
+
+Ans. In Python, defining a class involves using the class keyword followed by the class name. Inside the class, you can define attributes (variables) and methods (functions) that operate on those attributes.
+
+The self keyword in Python is a reference to the current instance of the class. It is used within the class to access variables or methods belonging to the class. When defining methods in a class, self must be the first parameter in the method definition, though it doesn't need to be passed explicitly during method calls.
+
+Here's an example of defining a simple class in Python:
+
+class Car :
+
+    # Constructor method to initialize attributes
+    def __init__(self, brand, model) :
+        self.brand = brand
+        self.model = model
+
+    # Method to display car details
+    def display_info(self) :
+        print(f "Car: {self.brand} {self.model}")
+
+# Creating an instance of the Car class
+car1 = Car("Toyota", "Corolla")
+
+# Accessing attributes and calling method using the instance
+print(car1.brand)  # Output: Toyota
+print(car1.model)  # Output: Corolla
+car1.display_info()  # Output: Car: Toyota Corolla
+
+25> Explain Inheritance in Python with an example? What is init? Or What Is A Constructor In Python? 
+
+Ans. Inheritance in Python with an Example :
+Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a new class (subclass) to inherit properties and behaviors (attributes and methods) from an existing class (superclass or parent class). The subclass can then extend or modify the functionalities of the superclass.
+
+Example:
+
+# Parent class (superclass)
+
+class Animal :
+    def __init__(self, species):
+        self.species = species
+
+    def make_sound(self):
+        pass
+
+# Child class (subclass) inheriting from Animal
+
+class Dog(Animal) :
+
+    def __init__(self, breed) :
+        # Calling the superclass constructor explicitly
+        super().__init__('Dog')
+        self.breed = breed
+
+    def make_sound(self) :
+        return "Woof!"
+
+# Creating an instance of the Dog class
+my_dog = Dog('Golden Retriever')
+
+# Accessing attributes and invoking methods
+print(f "My {my_dog.species} of breed {my_dog.breed} says: {my_dog.make_sound()}")
+
+--> In this example, Animal is the superclass, and Dog is the subclass inheriting from Animal.Dog inherits the __init__ method from Animal using the super() function, initializing the species attribute. It also defines its own make_sound method.
+my_dog is an instance of the Dog class, utilizing both the inherited and defined functionalities.
+
+==> __init__ - Constructor in Python:
+In Python, __init__ is a special method (constructor) within a class that gets called automatically when an object of the class is created. It is used to initialize the object's attributes or perform any setup required for the object.
+
+26> What is Instantiation in terms of OOP terminology? 
+
+Ans. Instantiation in OOP Terminology :
+Instantiation refers to the creation of an instance (object) of a class. When you create an object of a class, you are instantiating that class. For example, in Python, my_dog = Dog('Golden Retriever') is an instantiation of the Dog class.
+
+27>  What is used to check whether an object o is an instance of class A?
+
+Ans. Checking if an Object is an Instance of a Class :
+In Python, the isinstance() function is used to check whether an object belongs to a particular class. For instance :
+
+# Checking if 'my_dog' is an instance of the 'Dog' class
+result = isinstance(my_dog, Dog)
+print(result)  # Output: True
+
+28> What relationship is appropriate for Course and Faculty?
+
+Ans. Relationship between Course and Faculty :
+The relationship between Course and Faculty could be an association where a Faculty can teach multiple Course objects. This might be represented as a one-to-many relationship where one Faculty teaches many Course instances.
+
+29> What relationship is appropriate for Student and Person?  
+
+Ans. Relationship between Student and Person :
+The relationship between Student and Person is often a "is-a" relationship represented by inheritance. A Student "is-a" Person, implying that a Student class can inherit attributes or behaviors from the Person class since a student is a type of person.
