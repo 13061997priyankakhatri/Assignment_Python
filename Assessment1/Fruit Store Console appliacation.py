@@ -34,37 +34,37 @@ def Main_menu():
     print()
     choice = int (input ("Enter your choice : "))  
 
-    # Match Case Statement
-    match choice :
-        case 1 :
-            dict_info = {}
-            print("ADD FRUIT STOKE")
-            fruit = input("Enter fruit Name : ")
-            qty = int(input('Enter Qty : '))
-            price = int(input('Enter Price (for kg): '))
+    # If-elif-else Statement
+    if choice == 1 :
+        
+        dict_info = {}
+        print("ADD FRUIT STOKE")
+        fruit = input("Enter fruit Name : ")
+        qty = int(input('Enter Qty : '))
+        price = int(input('Enter Price (for kg): '))
+        
+        dict_info.update({'qty' : qty })
+        dict_info.update({'price' : price })
+        dict_main.update({fruit : dict_info})
 
-            dict_info.update({'qty' : qty })
-            dict_info.update({'price' : price })
+    elif choice == 2 :
 
-            dict_main.update({fruit : dict_info})
+        print("VIEW FRUIT STOKE")
+        print(dict_main)
 
-        case 2 :
-            print("VIEW FRUIT STOKE")
-            print(dict_main)
+    else:
 
-        case 3 :
-            print("UPDATE FRUIT STOKE")
-            dict_info = {}
-            
-            fruit = input("Enter fruit Name : ")
-            qty = int(input('Enter Qty : '))
-            price = int(input('Enter Price (for kg): '))
+        print("UPDATE FRUIT STOKE")
+        dict_info = {}
+        
+        fruit = input("Enter fruit Name : ")
+        qty = int(input('Enter Qty : '))
+        price = int(input('Enter Price (for kg): '))
+        dict_info.update({'qty' : qty })
+        dict_info.update({'price' : price })
 
-            dict_info.update({'qty' : qty })
-            dict_info.update({'price' : price })
-
-            dict_main.update({fruit : dict_info})
-   
+        dict_main.update({fruit : dict_info})
+        
     # To Continue the Program with this Function
     continue_function = int(input("Do you want to perform more operations ? (if yes press 1 else press 0) : "))
     print()
