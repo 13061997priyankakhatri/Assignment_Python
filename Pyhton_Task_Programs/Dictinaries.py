@@ -3,9 +3,15 @@ Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
 print(Dict_1)
 
 print()
+<<<<<<< HEAD
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
 '''
+=======
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+
+>>>>>>> a48689eba83e596409e192e3b7e856da88760e37
 Dict2 = {}
 alnum = input("Enter email : ")
 for p in range(15):
@@ -20,6 +26,8 @@ for u in range(0,8):
 print("Password is:", Dict3)
 print()
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
 
 Tops = {}
@@ -42,6 +50,7 @@ Tops['Feculty'] = {'name':name,'id':id}
 print(Tops)
 
 print()
+<<<<<<< HEAD
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
 '''
@@ -69,12 +78,18 @@ print()
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
 '''
+=======
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+
+>>>>>>> a48689eba83e596409e192e3b7e856da88760e37
 Quiz_game = {}
 
 for p in range(1,11) :
     
     que = input("Enter your question : ")
     ans = input("Enter your answer : ")
+<<<<<<< HEAD
     Quiz_game.update({str(p) :{"que": que , "ans": ans}})
     
 print("Quiz_game = ",Quiz_game)
@@ -106,3 +121,21 @@ while i <= 10 :
 
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print()
+=======
+
+    Quiz_game.update({"que"+str(p) :{"que": que , "ans": ans}})
+
+print("Quiz_game = ",Quiz_game)
+
+print()
+print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
+print()
+
+# task : if keys are same then make addition of values
+
+Dict_1 ={"name" : "Priyanka","age" : 26, "canvote" : True}
+Dict_2 ={"name" : "Priyanka","age" : 20, "canvote" : True}
+
+Dict_1.update(Dict_2)
+print(Dict_1)
+>>>>>>> a48689eba83e596409e192e3b7e856da88760e37

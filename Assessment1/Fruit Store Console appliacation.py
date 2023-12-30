@@ -64,7 +64,11 @@ def Main_menu():
         dict_info.update({'price' : price })
 
         dict_main.update({fruit : dict_info})
+<<<<<<< HEAD
    
+=======
+        
+>>>>>>> a48689eba83e596409e192e3b7e856da88760e37
     # To Continue the Program with this Function
     continue_function = int(input("Do you want to perform more operations ? (if yes press 1 else press 0) : "))
     print()
