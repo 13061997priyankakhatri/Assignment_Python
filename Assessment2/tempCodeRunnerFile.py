@@ -1,0 +1,1 @@
+root.configure(bg="#d3d3d3",relief=GROOVE, bd=2, padx=15)
