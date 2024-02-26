@@ -1,0 +1,86 @@
+1>Why Django should be used for web-development? Explain how you can create a project in Django? 
+
+Ans. Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It is widely used for web development due to its versatility, scalability, and the "Don't Repeat Yourself" (DRY) principle. 
+
+==> Here are some reasons why Django is a popular choice for web development:
+
+1> High-level abstractions: Django provides high-level abstractions like models, views, and templates, making it easier for developers to build robust web applications.
+
+2> ORM (Object-Relational Mapping): Django comes with a built-in ORM that allows you to interact with your database using Python code, rather than raw SQL queries.
+
+3> Built-in admin panel: Django includes a powerful admin interface that can be easily customized, allowing developers to manage database records without having to create a separate admin panel.
+
+4> Security features: Django includes various security features by default, such as protection against SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).
+
+5> Scalability: Django's architecture is designed to handle the scalability requirements of both small and large applications.
+
+===> Now, let's go through the steps of creating a Django project:
+
+    Creating a Django Project:
+
+    1. Install Django:
+    pip install django
+
+    2. Create a new project:
+    django-admin startproject yourprojectname
+
+    3. Navigate to the project directory:
+    cd yourprojectname
+
+    4. Run the development server:
+    python manage.py runserver
+
+    Your Django project is now running, and you can access it in a web browser at http://127.0.0.1:8000/.
+
+
+2> How to check installed version of django? 
+
+Ans.Checking Installed Django Version:
+    --> To check the installed version of Django, you can use the following command:
+
+        python -m django --version
+
+3> Explain what does django-admin.py make messages command is used for?
+
+Ans. Django make messages command:
+
+==> The "django-admin.py make messages" command  is used to extract translation strings from Django code and create or update the message files for translation. This is typically used when internationalizing a Django application to provide translations for different languages.
+
+
+4> What is Django URLs?make program to create django urls.
+
+Ans.Django URLs:
+    --> Django URLs define how URLs map to views in your application. They are defined in the urls.py file. Here's a simple example:
+
+        # urls.py
+            from . import views
+            from django.urls import path
+
+            urlpatterns = [
+                path('home/', views.home, name='home'),
+                path('about/', views.about, name='about'),
+            ]
+
+
+5> What is a QuerySet? Write program to create a new Post object in database:
+
+Ans. QuerySet:
+
+--> A QuerySet is a collection of database queries that can be used to retrieve data from your database. It allows you to filter, order, and manipulate data before it is returned from the database.
+
+==> Creating a new Post object in the database:
+
+--> Assuming you have a Post model defined in your Django application, you can create a new object like this:
+
+    from yourapp.models import Post
+
+    post = Post.objects.create(title='New Post', content='This is the content of the post.')
+
+
+6> Mention what command line can be used to load data into Django? 
+
+Ans. Loading Data into Django:
+
+--> To load data into Django, you can use the loaddata management command. For example:
+
+    python manage.py loaddata data.json
